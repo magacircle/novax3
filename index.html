@@ -1,38 +1,286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NovaX™ — Building the Parallel Economy</title>
-<meta name="description" content="NovaX™ — Building the Parallel Economy. What would you do with $50K? Take the quiz to see if you qualify for NovaX™.">
-<style>
-:root{--bg:#05090d;--footer:#050709;--footer-text:#77736a;--footer-link:#9a968b}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--bg)}
-body{margin:0;min-height:100vh;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
-.landing-page{min-height:100vh;background:var(--bg);display:flex;flex-direction:column;align-items:center}
-.landing-stage{position:relative;width:min(1812px,100%);line-height:0;background:var(--bg)}
-.landing-art{display:block;width:100%;height:auto;max-width:1812px}
-.landing-cta{position:absolute;left:35.5%;top:58.5%;width:28.4%;height:8.5%;border-radius:999px;z-index:2;display:block;cursor:pointer;-webkit-tap-highlight-color:transparent}
-.landing-cta:focus-visible{outline:3px solid #fff;outline-offset:6px}
-.site-footer{width:100%;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 12px 16px;background:var(--footer);color:var(--footer-text);font-size:10px;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;text-align:center}
-.site-footer a{color:var(--footer-link);text-decoration:none}.site-footer a:hover{color:#d7bd7e}.site-footer a:focus-visible{outline:2px solid #d7bd7e;outline-offset:3px}
-@media(max-width:600px){.landing-stage{width:100%}.landing-cta{top:58.5%;width:54%;height:8.5%}.site-footer{font-size:9px;gap:8px;padding:12px 9px 14px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaX™ — Building the Parallel Economy</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #030914;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Main Container with Background Graphic */
+        .hero-container {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(3, 9, 20, 0.4), rgba(3, 9, 20, 0.7)), 
+                        url('assets/background.png') no-repeat center center;
+            background-size: cover;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Header / Logo */
+        .header {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #b0c4de;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Main Content Area */
+        .content-box {
+            max-width: 800px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4da3ff, #9b51e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtext {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            max-width: 500px;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        /* Call To Action Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #3b82f6;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            padding: 16px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 10px rgba(59, 130, 246, 0.2);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            background: #3b82f6;
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .cta-button .arrow {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        /* Status Section / Spinner */
+        .status-container {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .spinner-ring {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            animation: spin 6s linear infinite;
+        }
+
+        .status-text {
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Footer Navigation */
+        .footer {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 25px;
+            z-index: 2;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .footer-nav a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #94a3b8;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: #475569;
+        }
+
+        /* Mobile Viewport Adaptations (Breakpoints) */
+        @media (max-width: 768px) {
+            .hero-container {
+                padding: 30px 16px;
+                background-position: 35% center; /* Adjusts mountain horizon focus for portrait screens */
+            }
+
+            .logo {
+                max-width: 200px;
+            }
+
+            .tagline {
+                font-size: 10px;
+                letter-spacing: 0.25em;
+            }
+
+            .headline {
+                font-size: 2.2rem;
+                margin-bottom: 16px;
+            }
+
+            .subtext {
+                font-size: 1rem;
+                margin-bottom: 30px;
+                padding: 0 10px;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 320px;
+                padding: 14px 30px;
+                font-size: 0.95rem;
+            }
+
+            .footer-nav {
+                gap: 20px;
+            }
+            
+            .footer-nav a {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-<main class="landing-page" aria-label="NovaX™ landing page">
-  <section class="landing-stage" aria-label="NovaX™ introduction">
-    <img class="landing-art" src="assets/NovaX_LANDING_RING_X_COLORS.png" alt="NovaX™ — Building the Parallel Economy. What would you do with $50K?">
-    <a class="landing-cta" href="quiz.html" aria-label="Let's begin the NovaX™ quiz"></a>
-  </section>
-  <nav class="site-footer" aria-label="Site navigation">
-    <span>Copyright © 2026 NovaX™</span><span aria-hidden="true">•</span>
-    <a href="index.html">Home</a><span aria-hidden="true">•</span>
-    <a href="quiz.html">Quiz</a><span aria-hidden="true">•</span>
-    <a href="privacy.html">Privacy</a><span aria-hidden="true">•</span>
-    <a href="terms.html">Terms</a>
-  </nav>
-</main>
+
+    <section class="hero-container">
+        
+        <!-- Header Brand Assets -->
+        <header class="header">
+            <img src="assets/logo.png" alt="NovaX" class="logo">
+            <div class="tagline">Building the Parallel Economy™</div>
+        </header>
+
+        <!-- Dynamic Core Content Area -->
+        <div class="content-box">
+            <h1 class="headline">What would you do with <span class="gradient-text">$50K?</span></h1>
+            <p class="subtext">Take the quiz to see if you qualify for NovaX™</p>
+            
+            <a href="#" class="cta-button">
+                Let's Begin <span class="arrow">&rarr;</span>
+            </a>
+
+            <!-- Status Indicator Section -->
+            <div class="status-container">
+                <img src="assets/spinner.png" alt="Loading Status" class="spinner-ring">
+                <div class="status-text">The First Circle Is Forming</div>
+            </div>
+        </div>
+
+        <!-- Compliance & Legal Navigation Footer -->
+        <footer class="footer">
+            <ul class="footer-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+            <div class="copyright">Copyright &copy; 2026 NovaX™</div>
+        </footer>
+
+    </section>
+
 </body>
 </html>
