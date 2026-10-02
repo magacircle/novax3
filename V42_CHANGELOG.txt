@@ -1,0 +1,14 @@
+NovaX™ V42 Surgical Update
+
+Approved changes:
+1. Landing page source in index.html now uses the exact founder-approved asset:
+   assets/NovaX_LANDING_RING_X_COLORS.png
+2. Landing CTA hit-area was repositioned to match the CTA embedded in that exact source image; no visual recreation or overlay button was added.
+3. The exact approved X-color ring asset is included at:
+   assets/NovaX_APPROVED_RING_X_COLORS.png
+4. Quiz Question 6 was shortened from:
+   “What would you do with $50,000 to deploy today?”
+   to:
+   “What would you do with $50,000?”
+
+No other quiz scoring, answer options, archetypes, profile logic, or page behavior was intentionally changed.
