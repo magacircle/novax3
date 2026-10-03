@@ -1,0 +1,24 @@
+NovaX™ V43 — Mobile-First Landing + Hub V2 Quiz Treatment
+Date: 2026-10-03
+
+Landing page
+- Rewrote index.html mobile-first.
+- Portrait/phone is the default responsive composition.
+- Laptop/desktop switches at min-width:768px + landscape to the locked 1672×940 landscape composition.
+- Uses the exact locked portrait and landscape reference plates supplied in the approved restore point.
+- Preserves the real quiz.html CTA destination via a transparent functional hit area.
+- Preserves existing footer links.
+- No asset deletions were made in V43.
+
+Quiz
+- Confirmed the actual Hub V2 quiz.html source still uses the older charcoal/gold treatment.
+- Applied the Hub V2 navy/cyan/blue/violet visual language to V43 quiz.html, matching the palette defined in the V2 hub.html source.
+- Preserved quiz functionality and existing application logic.
+
+Branding audit
+- Updated visible "Building the Parallel Economy" tagline instances found in active HTML pages to include the approved ™ marker.
+- No Builder Profile or Hub redesign was performed.
+
+Restore point
+- V43 is based on NovaX_V42_APPROVED_RESTORE_2026-10-02.
+- Existing assets were retained; no unapproved asset cleanup was performed.
