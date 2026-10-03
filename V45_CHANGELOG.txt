@@ -1,0 +1,9 @@
+V45 — Quiz layout rollback + centered brand lockups
+
+- Landing page from V44 is preserved and remains LOCKED as the responsive implementation.
+- Quiz layout is reverted to the V43 structure/geometry.
+- Quiz receives color treatment only: navy / blue / purple palette with restrained gold accents.
+- Quiz spacing, panel geometry, typography sizing, component layout, and responsive breakpoints are preserved from V43.
+- Approved NovaX logo asset remains in use on Quiz and across audited pages.
+- Logo + “Building the Parallel Economy™” lockup is explicitly centered together on every page where both appear: Quiz, Privacy, Terms, Prelaunch Invite Rules, and 404.
+- No assets deleted.
