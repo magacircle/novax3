@@ -1,3 +1,9 @@
+# NovaX V42 Approved Restore Point — 2026-10-02
+
+See `NOVAX_RESTORE_POINT_2026-10-02.md` for the restore-point identity and asset cleanup record.
+
+---
+
 # NovaX™ — Prelaunch Invite / Founder Rewards Prototype V41
 
 This build restores the working V22 Quiz/Builder experience while layering the locked NovaX™ Invite / Founders architecture on top.
