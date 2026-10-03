@@ -1,0 +1,16 @@
+NovaX V44 — Responsive + Brand Asset + Quiz Visual Audit
+Date: 2026-10-03
+
+Implemented:
+- Landing page now uses explicit portrait and landscape locked reference states rather than a <picture> source switch.
+- Portrait state is mobile-first and fills the viewport height while preserving the approved 2:3 plate; desktop landscape state uses the approved 1672x940 plate.
+- Desktop/landscape and mobile/portrait CTA hit areas remain functional and route to quiz.html.
+- Full HTML-page logo audit completed. Every rendered page logo reference now points to assets/NovaX_APPROVED_LOGO_ASSET.png. Legacy logo files were NOT deleted.
+- Hub theme logic now keeps the approved logo asset in both theme states; light-mode header remains dark enough for the approved white logo to stay legible.
+- Quiz visual layer updated to the reviewed navy/blue/purple treatment with restrained gold kicker/divider accents. Existing quiz functionality was preserved.
+- Quiz header logo and BUILDING THE PARALLEL ECONOMY™ tagline are now centered as a single vertical brand lockup.
+- Quiz typography, panel treatment, inputs, CTA, answer states, progress, success/milestone states, and invite sheet were aligned to the reviewed treatment.
+
+Asset safety:
+- No assets were deleted.
+- Legacy logo assets remain available for rollback/dependency inspection.
